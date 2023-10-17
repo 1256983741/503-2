@@ -14,7 +14,9 @@ Do you accept the above EULA? (accept / decline / quit):
 
 回车键进行勾选，X就是选中，没有X就是没有选中，把（driver）安装驱动进行取消。之后向下键，回车确认
 
-最后点击 install
+最后点击：
+
+    install
 
 2.配置cuda环境
 
@@ -27,7 +29,7 @@ Do you accept the above EULA? (accept / decline / quit):
 
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.8/lib64
 
-更新环境
+    #更新环境
     source ~/.bashrc
 
 3.测试
@@ -35,6 +37,7 @@ Do you accept the above EULA? (accept / decline / quit):
     nvcc -V
 
 输出下述结果，表示安装成功:
+    
     nvcc: NVIDIA (R) Cuda compiler driver
     Copyright (c) 2005-2022 NVIDIA Corporation
     Built on Wed_Sep_21_10:33:58_PDT_2022
@@ -42,6 +45,7 @@ Do you accept the above EULA? (accept / decline / quit):
     Build cuda_11.3.r11.3/compiler.31833905_0
 
 4.安装cudnn
+
 下载cuda对应版本的cudnn包 https://developer.nvidia.com/rdp/cudnn-archive
 
 将压缩包，放入自定义路径后，输入命令进行解压
@@ -64,8 +68,7 @@ Do you accept the above EULA? (accept / decline / quit):
 
 5.cuda版本切换
 
-修改bashrc
-
+    #修改bashrc
     sudo vim ~/.bashrc
 
 将原先的cuda-11.3注释掉，添加cuda-11.x新的环境设置，即可
